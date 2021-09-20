@@ -1,0 +1,7 @@
+unt_news.campus_news_controller_showStory:
+  path: /article/{storyId}
+  defaults:
+    _controller: \Drupal\unt_news\Controller\CampusNewsController::showStory
+
+  requirements:
+    _permission: 'access content'

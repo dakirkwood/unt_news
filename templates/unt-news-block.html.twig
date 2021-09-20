@@ -1,0 +1,18 @@
+{%  for story in content %}
+
+  <div class="listing news">
+
+    {% if story['newsImage'] %}
+      <img src="{{ story['newsImage'] }}" alt="" />
+    {% endif %}
+
+    <div class="news-info">
+      <h3 class="news-headline"><a href="/article/{{ story['newsId'] }}">{{ story['newsTitle'] }}</a></h3>
+      <p>
+        <span class="news-dept">{{ story['newsDept'] }}</span><br />
+        <span class="news-summary">{{ story['newsBody']|striptags }}</span>
+      </p>
+    </div>
+  </div>
+
+{% endfor %}

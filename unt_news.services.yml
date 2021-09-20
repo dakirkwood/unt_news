@@ -1,0 +1,5 @@
+services:
+  unt_news_client:
+    class: Drupal\unt_news\UntNewsClient
+    arguments:
+      - '@http_client_factory'
